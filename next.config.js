@@ -2,7 +2,8 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ['mdx-bundler'],
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

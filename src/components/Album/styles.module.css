@@ -1,3 +1,11 @@
 main.DocWrapper {
   background-color: #bee9ff;
 }
+
+p.Description {
+  font-size: 22px;
+  font-style: italic;
+  color: #777;
+
+  margin: 0 0 2em;
+}

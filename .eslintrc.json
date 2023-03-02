@@ -1,3 +1,73 @@
 {
-  "extends": "next/core-web-vitals"
+  // Base eslint config
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "React": "writable"
+  },
+  // Dependencies
+  "plugins": [
+    "prettier",
+    "eslint-plugin-import"
+  ],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  // Eslint typescript support
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./",
+    "jsx": true,
+    // Hide 'typescript-eslint/typescript-estree' TypeScript warning
+    "warnOnUnsupportedTypeScriptVersion": false
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    // Import ordering
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "desc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "destructuredArrayIgnorePattern": "^_$"
+      }
+    ],
+    // Prettier
+    "prettier/prettier": "error"
+  }
 }

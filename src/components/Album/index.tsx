@@ -1,9 +1,21 @@
-import { AlbumWrapper } from "./styles";
+import { Frontmatter } from "@/types/frontmatter";
+import { AlbumWrapper, Description } from "./styles";
 
-const Album = () => {
+interface Props {
+  album: {
+    frontmatter: Frontmatter;
+  }
+}
+
+const Album = ({ album }: Props) => {
+  const {
+    frontmatter: { title, description },
+  } = album;
+
   return (
     <AlbumWrapper>
-      <h1>This is an album</h1>
+      <h1>{title}</h1>
+      {album.frontmatter.description && <Description>{description}</Description>}
     </AlbumWrapper>
   );
 };
