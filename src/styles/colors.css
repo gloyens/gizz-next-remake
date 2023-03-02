@@ -1,0 +1,6 @@
+:root,
+*::after,
+*::before {
+  --color-fg: #333;
+  --color-bg: #eee;
+}
