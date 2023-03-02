@@ -3,3 +3,29 @@ div.Container {
   flex-direction: column;
   justify-content: center;
 }
+
+main.Hero {
+  padding: 4em;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.Hero a {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  padding: 18px;
+  color: var(--color-fg);
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+main.Hero a:hover {
+  background-color: #ccc;
+  transition: 0.2s ease;
+}
