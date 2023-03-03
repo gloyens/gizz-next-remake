@@ -4,21 +4,21 @@ import { notFound } from "next/navigation";
 
 import Album from "@/components/Album";
 import { Container } from "@/app/styles";
-import { getMdxByAlbum } from "@/app/content";
+import { getMdxBySlug } from "@/app/content";
 
 interface Props {
     params: {
-        album: string;
+        slug: string;
     };
 }
 
 export async function generateMetadata({ params }: Props) {
-  const album = await getMdxByAlbum("albums", params.album);
+  const album = await getMdxBySlug("albums", params.slug);
   if (album) return { title: album?.frontmatter.title };
 }
 
 export default async function Albums({ params }: Props) {
-  const album = await getMdxByAlbum("albums", params.album);
+  const album = await getMdxBySlug("albums", params.slug);
   if (!album) return notFound();
 
   return (

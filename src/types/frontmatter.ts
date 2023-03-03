@@ -2,5 +2,6 @@ export type Frontmatter = {
   title: string;
   description?: string;
   index?: number;
-  album: string;
+  bandcampCode: number;
+  slug: string;
 };

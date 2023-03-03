@@ -22,14 +22,14 @@ export const getAllFrontmatter = (fromPath: string) => {
     const { data } = matter(source);
 
     return {
-      ...(data as Frontmatter), album: path.basename(filePath, ".mdx"),
+      ...(data as Frontmatter), slug: path.basename(filePath, ".mdx"),
     }
   }).sort(sortByIndex);
 };
 
 // Convert MDX data to Frontmatter type
-export const getMdxByAlbum = async (basePath: string, album: string) => {
-  const mdxPath = path.join(DATA_PATH, basePath, `${album}.mdx`);
+export const getMdxBySlug = async (basePath: string, slug: string) => {
+  const mdxPath = path.join(DATA_PATH, basePath, `${slug}.mdx`);
   if (!fs.existsSync(mdxPath)) return;
 
   const source = fs.readFileSync(mdxPath, "utf8");
@@ -39,7 +39,7 @@ export const getMdxByAlbum = async (basePath: string, album: string) => {
   return {
     frontmatter: {
       ...(frontmatter as Frontmatter),
-      album,
+      slug,
     } as Frontmatter,
     code,
   };
