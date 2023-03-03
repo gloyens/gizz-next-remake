@@ -1,6 +1,7 @@
 "use server"
 
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import Album from "@/components/Album";
 import { Container } from "@/app/styles";
@@ -24,6 +25,7 @@ export default async function Albums({ params }: Props) {
   return (
     <Container>
       <Album album={album}/>
+      <Link href="/albums">Go back</Link>
     </Container>
   );
 }

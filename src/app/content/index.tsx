@@ -41,6 +41,16 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
       ...(frontmatter as Frontmatter),
       slug,
     } as Frontmatter,
-    code,
   };
 };
+
+export const getAlbumData = (prop: string) => {
+  const albumsData = getAllFrontmatter("albums");
+  const data:string[] = [];
+
+  albumsData.map((album) => (
+    data.push(album[prop])
+  ));
+
+  return data;
+}
