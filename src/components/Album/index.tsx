@@ -17,14 +17,14 @@ const Album = ({ album }: Props) => {
 
   return (
     <AlbumWrapper>
-      <h1>{title}</h1>
-      {album.frontmatter.description && <Description>{description}</Description>}
       <Image
         src={`/${slug}.jpg`}
         alt={`${title} album cover`}
         width="320"
         height="320"
       />
+      <h1>{title}</h1>
+      {album.frontmatter.description && <Description>{description}</Description>}
       <MediaPlayer bandcampCode={bandcampCode!}/> {/* TODO: Why is this throwing an error? */}
     </AlbumWrapper>
   );

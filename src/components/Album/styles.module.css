@@ -1,5 +1,14 @@
-main.DocWrapper {
-  background-color: #bee9ff;
+main.AlbumWrapper img {
+  width: 100%;
+  height: 100vw;
+  object-fit: cover;
+  padding: 2rem;
+
+  border-radius: 60px;
+}
+
+main.AlbumWrapper iframe {
+  width: 100%;
 }
 
 p.Description {

@@ -1,6 +1,14 @@
 :root,
 *::after,
 *::before {
-  --color-fg: #333;
-  --color-bg: #eee;
+  --color-black: #333;
+  --color-white: #f9e6df;
+
+  --color-primary: #0091ff;
+  --color-primary-dark: #007bff;
+  --color-primary-transparent: rgba(0, 0, 139, 0.2);
+
+  --color-secondary: yellow;
+  --color-secondary-dark: gold;
+  --color-tertiary: #ea4c89;
 }

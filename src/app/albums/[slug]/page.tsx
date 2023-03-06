@@ -25,7 +25,7 @@ export default async function Albums({ params }: Props) {
   return (
     <Container>
       <Album album={album}/>
-      <Link href="/albums">Go back</Link>
+      <Link href="/albums">Back to album index</Link>
     </Container>
   );
 }

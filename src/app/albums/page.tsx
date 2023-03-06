@@ -8,7 +8,7 @@ export default async function Albums() {
 
   return (
     <Container>
-      <h1>Albums index goes here</h1>
+      <h1>Albums</h1>
       {titles.map((title, i) => (
         <li key={i}>
           <Link href={`/albums/${slugs[i]}`}>{title}</Link>

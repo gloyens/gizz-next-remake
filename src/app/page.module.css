@@ -1,31 +1,72 @@
 div.Container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
-main.Hero {
-  padding: 4em;
+div.Hero {
   display: flex;
-  gap: 1rem;
   flex-direction: column;
+  align-items: center;
+  background-color: var(--color-primary);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+div.Hero h1 {
+  font-family: var(--dela);
+  font-size: 30vw;
+  line-height: 0.9;
+  text-transform: uppercase;
+  transform: scaleY(0.8);
+  letter-spacing: 0.5rem;
+  margin: -12vw 0 0 1rem;
+  color: var(--color-primary-dark);
+}
+
+div.InfoWrapper {
+  position: absolute;
+  z-index: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-main.Hero a {
+main.InfoContainer {
+  max-width: 600px;
+  padding: 10rem 4rem 0;
+  color: var(--color-white);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+footer.Credits {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2rem 3rem;
+  color: var(--color-primary-transparent);
+  font-weight: 700;
+}
+
+div.ButtonsContainer {
   display: flex;
-  align-items: center;
-  font-size: large;
-  padding: 18px;
-  color: var(--color-fg);
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: 0.2s ease;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 2rem 0;
+  justify-content: center;
 }
 
-main.Hero a:hover {
-  background-color: #ccc;
-  transition: 0.2s ease;
+@media (min-width: 576px) {
+  main.InfoContainer {
+    padding: 0 4rem;
+  }
+
+  div.ButtonsContainer {
+    justify-content: flex-start;
+  }
 }

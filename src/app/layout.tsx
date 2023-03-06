@@ -1,20 +1,21 @@
 import "@/styles/globals.css"
 import "@/styles/colors.css"
 import { Metadata } from "next"
+import { fontClasses } from "@/styles/fonts"
 
 // TODO: metadata
 export const metadata: Metadata = {
   title: {
-    default: "CSS Components",
-    template: "%s | CSS Components",
+    default: "Get Into Gizz",
+    template: "%s | Get Into Gizz",
   },
   description:
     "Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components.",
   keywords: ["css", "component", "utility"],
   openGraph: {
     title: {
-      default: "CSS Components",
-      template: "%s | CSS Components",
+      default: "Get Into Gizz",
+      template: "%s | Get Into Gizz",
     },
     description:
       "Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components.",
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CSS Components",
-    creator: "@phntmLDN",
+    title: "Get Into Gizz",
+    creator: "@gloyens",
     images: ["https://www.css-components.net/banner.png"],
   },
   robots: {
@@ -46,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={fontClasses}>{children}</body>
     </html>
   )
 }
