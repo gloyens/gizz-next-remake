@@ -1,16 +1,17 @@
-"use server"
+"use server";
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
 import Album from "@/components/Album";
-import { Container } from "@/app/styles";
 import { getMdxBySlug } from "@/app/content";
 
+import { PageContainer } from "./styles";
+
 interface Props {
-    params: {
-        slug: string;
-    };
+  params: {
+    slug: string;
+  };
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -23,9 +24,9 @@ export default async function Albums({ params }: Props) {
   if (!album) return notFound();
 
   return (
-    <Container>
-      <Album album={album}/>
+    <PageContainer>
+      <Album album={album} />
       <Link href="/albums">Back to album index</Link>
-    </Container>
+    </PageContainer>
   );
 }

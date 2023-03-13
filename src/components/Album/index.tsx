@@ -1,32 +1,39 @@
-import Image from "next/image";
+import { getMDXComponent } from "mdx-bundler/client";
 
 import { Frontmatter } from "@/types/frontmatter";
 import MediaPlayer from "@/components/MediaPlayer";
+import FlowchartLinks from "@/components/FlowchartLinks";
 
-import { AlbumWrapper } from "./styles";
+import { AlbumWrapper, HeroImage, Info } from "./styles";
 
 interface Props {
   album: {
     frontmatter: Frontmatter;
+    code: string;
   };
 }
 
 const Album = ({ album }: Props) => {
+  const Content = getMDXComponent(album.code);
+
   const {
-    frontmatter: { title, bandcampCode, slug },
+    frontmatter: { title, bandcampCode, slug, nextAlbums },
   } = album;
 
   return (
     <AlbumWrapper>
-      <Image
+      <HeroImage
         src={`/${slug}.jpg`}
         alt={`${title} album cover`}
-        width="320"
-        height="320"
+        width="512"
+        height="512"
       />
-      <h1>{title}</h1>
+      <Info>
+        <Content />
+      </Info>
       <MediaPlayer bandcampCode={bandcampCode!} />{" "}
       {/* TODO: Why is this throwing an error? */}
+      <FlowchartLinks nextAlbums={nextAlbums} />
     </AlbumWrapper>
   );
 };

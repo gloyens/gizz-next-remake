@@ -1,9 +1,9 @@
 import path from "path";
 import fs from "fs";
 
-import { globSync } from "glob";
-import matter from "gray-matter";
 import { bundleMDX } from "mdx-bundler";
+import matter from "gray-matter";
+import glob from "glob";
 
 import { sortByIndex } from "@/utils/array";
 import type { Frontmatter } from "@/types/frontmatter";
@@ -13,18 +13,21 @@ export const DATA_PATH = path.join(ROOT_PATH, "data");
 
 export const getAllFrontmatter = (fromPath: string) => {
   const PATH = path.join(DATA_PATH, fromPath);
-  const paths = globSync(`${PATH}/**/*.mdx`);
+  const paths = glob.sync(`${PATH}/**/*.mdx`);
 
-  return paths.map((filePath) => {
-    // Get page
-    const source = fs.readFileSync(path.join(filePath), "utf8");
-    // Get frontmatter data
-    const { data } = matter(source);
+  return paths
+    .map((filePath) => {
+      // Get page
+      const source = fs.readFileSync(path.join(filePath), "utf8");
+      // Get frontmatter data
+      const { data } = matter(source);
 
-    return {
-      ...(data as Frontmatter), slug: path.basename(filePath, ".mdx"),
-    }
-  }).sort(sortByIndex);
+      return {
+        ...(data as Frontmatter),
+        slug: path.basename(filePath, ".mdx"),
+      };
+    })
+    .sort(sortByIndex);
 };
 
 // Convert MDX data to Frontmatter type
@@ -41,16 +44,15 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
       ...(frontmatter as Frontmatter),
       slug,
     } as Frontmatter,
+    code,
   };
 };
 
 export const getAlbumData = (prop: string) => {
   const albumsData = getAllFrontmatter("albums");
-  const data:string[] = [];
+  const data: string[] = [];
 
-  albumsData.map((album) => (
-    data.push(album[prop])
-  ));
+  albumsData.map((album) => data.push(album[prop]));
 
   return data;
-}
+};

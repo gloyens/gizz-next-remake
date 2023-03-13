@@ -1,0 +1,48 @@
+.FlowchartLinkWrapper {
+  display: flex;
+  width: 100%;
+  max-height: 128px;
+
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+
+  transition: 0.2s;
+}
+
+.FlowchartLinkWrapper:hover {
+  background-color: #222;
+}
+
+.FlowchartLinkWrapper img {
+  width: 128px;
+  height: 128px;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+div.Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+div.Info h2,
+div.Info p {
+  margin: 0;
+}
+
+div.Info span {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+div.Arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  font-size: 28px;
+  opacity: 0.5;
+}
