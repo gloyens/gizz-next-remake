@@ -1,0 +1,6 @@
+div.PageContainer {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  max-width: 700px;
+}
