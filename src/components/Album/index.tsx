@@ -1,18 +1,19 @@
 import Image from "next/image";
-import MediaPlayer from "@/components/MediaPlayer";
 
 import { Frontmatter } from "@/types/frontmatter";
-import { AlbumWrapper, Description } from "./styles";
+import MediaPlayer from "@/components/MediaPlayer";
+
+import { AlbumWrapper } from "./styles";
 
 interface Props {
   album: {
     frontmatter: Frontmatter;
-  }
+  };
 }
 
 const Album = ({ album }: Props) => {
   const {
-    frontmatter: { title, description, bandcampCode, slug },
+    frontmatter: { title, bandcampCode, slug },
   } = album;
 
   return (
@@ -24,8 +25,8 @@ const Album = ({ album }: Props) => {
         height="320"
       />
       <h1>{title}</h1>
-      {album.frontmatter.description && <Description>{description}</Description>}
-      <MediaPlayer bandcampCode={bandcampCode!}/> {/* TODO: Why is this throwing an error? */}
+      <MediaPlayer bandcampCode={bandcampCode!} />{" "}
+      {/* TODO: Why is this throwing an error? */}
     </AlbumWrapper>
   );
 };
