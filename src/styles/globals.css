@@ -2,11 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--noto-sans), -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
-  background: var(--color-white);
-  color: var(--color-black);
+  font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+  background: linear-gradient(#222, #000);
+  color: var(--color-white);
   scroll-behavior: smooth;
 }
 

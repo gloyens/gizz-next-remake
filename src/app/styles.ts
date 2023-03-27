@@ -6,7 +6,7 @@ export const Container = styled("div", {
   css: css.Container,
 });
 
-export const Hero = styled("div", {
+export const Hero = styled("main", {
   css: css.Hero,
 });
 
@@ -14,14 +14,14 @@ export const InfoWrapper = styled("div", {
   css: css.InfoWrapper,
 });
 
-export const InfoContainer = styled("main", {
-  css: css.InfoContainer,
+export const Overlay = styled("nav", {
+  css: css.Overlay,
 });
 
-export const ButtonsContainer = styled("div", {
-  css: css.ButtonsContainer,
+export const Nav = styled("ul", {
+  css: css.Nav,
 });
 
-export const Credits = styled("footer", {
-  css: css.Credits,
+export const InnerNav = styled("ul", {
+  css: css.InnerNav,
 });

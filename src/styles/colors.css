@@ -1,7 +1,8 @@
 :root,
 *::after,
 *::before {
-  --color-black: #333;
+  --color-black: #222;
+  --color-grey: #888;
   --color-white: #fafafa;
 
   --color-primary: #0091ff;

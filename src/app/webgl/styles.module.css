@@ -1,0 +1,43 @@
+div.HtmlWrapper {
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  width: 180px;
+
+  /* background: #333;
+  padding: 8px 16px;
+  border-radius: 3px; */
+
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+
+  animation: bounce2 1s ease infinite;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+div.HtmlBGWrapper {
+  user-select: none;
+  z-index: -100;
+
+  display: flex;
+  line-height: 0.8;
+
+  font-size: 300px;
+  font-weight: 900;
+  text-align: center;
+
+  color: rgb(209, 144, 14);
+}

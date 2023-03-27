@@ -1,0 +1,9 @@
+div.SceneWrapper {
+  width: 400px;
+  min-width: 400px;
+  aspect-ratio: 1;
+  margin: 0 0 2rem;
+
+  /* border: 1px solid grey; */
+  /* background: goldenrod; */
+}

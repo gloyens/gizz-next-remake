@@ -1,7 +1,6 @@
-import "@/styles/globals.css"
-import "@/styles/colors.css"
-import { Metadata } from "next"
-import { fontClasses } from "@/styles/fonts"
+import "@/styles/globals.css";
+import "@/styles/colors.css";
+import { Metadata } from "next";
 
 // TODO: metadata
 export const metadata: Metadata = {
@@ -38,16 +37,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={fontClasses}>{children}</body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }

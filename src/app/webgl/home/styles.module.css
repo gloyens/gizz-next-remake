@@ -1,0 +1,25 @@
+div.HtmlWrapper {
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  width: 180px;
+
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+
+  font-family: Helvetica Neue;
+  font-weight: lighter;
+
+  animation: bounce2 1s ease infinite;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
