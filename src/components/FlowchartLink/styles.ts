@@ -11,6 +11,6 @@ export const Info = styled("div", {
   css: css.Info,
 });
 
-export const Arrow = styled("div", {
-  css: css.Arrow,
+export const Button = styled("a", {
+  css: css.Button,
 });

@@ -9,8 +9,13 @@ interface Props {
 const FlowchartLinks = ({ nextAlbums }: Props) => {
   return (
     <FlowchartLinksWrapper>
-      {nextAlbums.map((album) => (
-        <FlowchartLink key={album[0]} name={album[0]} label={album[1]} />
+      {nextAlbums.map((album, index) => (
+        <FlowchartLink
+          key={album[0]}
+          name={album[0]}
+          label={album[1]}
+          number={index + 1}
+        />
       ))}
     </FlowchartLinksWrapper>
   );

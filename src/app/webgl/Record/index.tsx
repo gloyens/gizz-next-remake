@@ -22,7 +22,10 @@ const Record = () => {
     const t = Math.sin(clock.getElapsedTime());
 
     recordRef.current.rotation.x = -0.25;
-    recordRef.current.rotation.y = t * 0.25;
+    recordRef.current.rotation.y = t * 0.2;
+
+    recordRef.current.position.y =
+      Math.sin(clock.getElapsedTime() * 4 + 1) * 0.02;
   });
 
   const { scale } = useSpring({

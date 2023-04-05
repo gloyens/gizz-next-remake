@@ -21,20 +21,22 @@ const Album = ({ album }: Props) => {
   } = album;
 
   return (
-    <AlbumWrapper>
+    <>
       <HeroImage
         src={`/${slug}.jpg`}
         alt={`${title} album cover`}
         width="512"
         height="512"
       />
-      <Info>
-        <Content />
-      </Info>
-      <MediaPlayer bandcampCode={bandcampCode!} />{" "}
-      {/* TODO: Why is this throwing an error? */}
-      <FlowchartLinks nextAlbums={nextAlbums} />
-    </AlbumWrapper>
+      <AlbumWrapper>
+        <Info>
+          <Content />
+        </Info>
+        <MediaPlayer bandcampCode={bandcampCode!} />{" "}
+        {/* TODO: Why is this throwing an error? */}
+        <FlowchartLinks nextAlbums={nextAlbums} />
+      </AlbumWrapper>
+    </>
   );
 };
 
