@@ -11,7 +11,7 @@ interface Props {
 
 const FlowchartLink = ({ name, label }: Props) => {
   return (
-    <FlowchartLinkWrapper href={`./albums/${kebabify(name)}`}>
+    <FlowchartLinkWrapper href={`/albums/${kebabify(name)}`}>
       <Image
         src={`/${kebabify(name)}.jpg`}
         alt={`${name} album cover`}
