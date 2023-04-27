@@ -19,7 +19,7 @@ const FlowchartLink = ({ name, label }: Props) => {
         height="512"
       />
       <Info>
-        <p>{label} Lorem ipsum dolor sit amet. </p>
+        <p>{label}</p>
         <Button>Go to {name}</Button>
       </Info>
     </FlowchartLinkWrapper>
