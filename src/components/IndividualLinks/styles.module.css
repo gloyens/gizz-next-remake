@@ -12,7 +12,7 @@ ul.IndividualLinksWrapper li {
   padding: 0;
 }
 
-.Link {
+a.Link {
   list-style-type: none;
   padding: 1rem;
 
@@ -23,11 +23,11 @@ ul.IndividualLinksWrapper li {
   transition: 0.2s;
 }
 
-.Link:hover {
+a.Link:hover {
   transform: scale(1.02);
 }
 
-.Link img {
+a.Link img {
   border-radius: var(--border-radius);
 }
 

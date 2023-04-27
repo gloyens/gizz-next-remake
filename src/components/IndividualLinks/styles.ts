@@ -1,4 +1,3 @@
-import BaseLink from "next/link";
 import { styled } from "@phntms/css-components";
 
 import css from "./styles.module.css";
@@ -15,6 +14,6 @@ export const Button = styled("span", {
   css: css.Button,
 });
 
-export const Link = styled(BaseLink, {
+export const Link = styled("a", {
   css: css.Link,
 });

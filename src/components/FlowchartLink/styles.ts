@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { styled } from "@phntms/css-components";
 
 import css from "./styles.module.css";
 
-export const FlowchartLinkWrapper = styled(Link, {
+export const FlowchartLinkWrapper = styled("a", {
   css: css.FlowchartLinkWrapper,
 });
 

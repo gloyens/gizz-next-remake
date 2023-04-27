@@ -15,6 +15,7 @@ interface Props {
 }
 
 const Album = ({ album }: Props) => {
+  // window.scrollTo(0, 0);
   const Content = getMDXComponent(album.code);
 
   const {

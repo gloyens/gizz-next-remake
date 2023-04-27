@@ -3,7 +3,6 @@ div.Container {
   flex-direction: column;
   justify-content: flex-start;
   padding-bottom: 100px;
-  /* height: 100vh; */
 }
 
 main.Hero {

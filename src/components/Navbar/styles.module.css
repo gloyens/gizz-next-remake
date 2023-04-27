@@ -16,11 +16,11 @@ ul.Items {
   gap: 2rem;
 }
 
-ul.Items li {
+ul.Items li a {
   padding: 4px 8px;
 }
 
-ul.Items li:hover {
+ul.Items li a:hover {
   color: var(--color-black);
   background-color: var(--color-primary);
   border-radius: var(--border-radius);
