@@ -4,6 +4,7 @@ import { Frontmatter } from "@/types/frontmatter";
 import MediaPlayer from "@/components/MediaPlayer";
 import FlowchartLinks from "@/components/FlowchartLinks";
 
+import IndividualLinks from "../IndividualLinks";
 import { AlbumWrapper, HeroImage, Info } from "./styles";
 
 interface Props {
@@ -32,8 +33,12 @@ const Album = ({ album }: Props) => {
         <Info>
           <Content />
         </Info>
-        <MediaPlayer bandcampCode={bandcampCode!} />{" "}
-        <FlowchartLinks nextAlbums={nextAlbums} />
+        <MediaPlayer bandcampCode={bandcampCode!} />
+        {nextAlbums[0] == "compilation" ? (
+          <IndividualLinks nextAlbums={nextAlbums} />
+        ) : (
+          <FlowchartLinks nextAlbums={nextAlbums} />
+        )}
       </AlbumWrapper>
     </>
   );
