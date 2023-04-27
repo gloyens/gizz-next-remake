@@ -30,46 +30,9 @@ div.InfoWrapper p {
   color: var(--color-grey);
 }
 
-/* REWORK ALL THIS TO WORK WITH CSS-COMPONENTS VARIANTS */
-
-ul.Nav {
-  position: sticky;
-  top: 0;
-  background-color: var(--color-black);
-  color: var(--color-grey);
-  margin: 0;
-  padding: 1rem;
-  list-style-type: none;
-  font-family: "Courier New", Courier, monospace;
-  display: flex;
-  justify-content: space-between;
-}
-
-ul.Nav li {
-  display: flex;
-  align-self: center;
-  padding: 0;
-}
-
-ul.InnerNav {
-  display: flex;
-  gap: 1rem;
-  padding: 0;
-}
-
-ul.InnerNav li {
-  padding: 0;
-}
-
-/* END REWORK */
-
 @media (min-width: 1024px) {
   div.Container {
     height: 100svh;
-  }
-
-  ul.Nav {
-    background-color: transparent;
   }
 
   main.Hero {

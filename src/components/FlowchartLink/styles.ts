@@ -11,6 +11,6 @@ export const Info = styled("div", {
   css: css.Info,
 });
 
-export const Button = styled("a", {
+export const Button = styled("div", {
   css: css.Button,
 });

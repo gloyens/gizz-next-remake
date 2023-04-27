@@ -1,8 +1,8 @@
 "use server";
 
 import { notFound } from "next/navigation";
-import Link from "next/link";
 
+import Navbar from "@/components/Navbar";
 import Album from "@/components/Album";
 import { getMdxBySlug } from "@/app/content";
 
@@ -24,9 +24,11 @@ export default async function Albums({ params }: Props) {
   if (!album) return notFound();
 
   return (
-    <PageContainer>
-      <Album album={album} />
-      <Link href="/albums">Back to album index</Link>
-    </PageContainer>
+    <>
+      <Navbar />
+      <PageContainer>
+        <Album album={album} />
+      </PageContainer>
+    </>
   );
 }

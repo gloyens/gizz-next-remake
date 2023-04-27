@@ -1,0 +1,37 @@
+nav.NavbarWrapper {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--color-primary);
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  z-index: 1;
+}
+
+ul.Items {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+ul.Items li {
+  padding: 4px 8px;
+}
+
+ul.Items li:hover {
+  color: var(--color-black);
+  background-color: var(--color-primary);
+  border-radius: var(--border-radius);
+
+  transition: 0.2s;
+}
+
+@media (min-width: 768px) {
+  nav.NavbarWrapper {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#000000bb 20%, #00000000 100%);
+  }
+}

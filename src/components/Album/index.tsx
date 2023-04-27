@@ -33,7 +33,6 @@ const Album = ({ album }: Props) => {
           <Content />
         </Info>
         <MediaPlayer bandcampCode={bandcampCode!} />{" "}
-        {/* TODO: Why is this throwing an error? */}
         <FlowchartLinks nextAlbums={nextAlbums} />
       </AlbumWrapper>
     </>

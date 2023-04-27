@@ -4,3 +4,23 @@ div.PageContainer {
   flex-direction: column;
   max-width: 700px;
 }
+
+.Link {
+  width: fit-content;
+  padding: 12px 16px;
+
+  background-color: #222;
+  border-radius: var(--border-radius);
+
+  transition: 0.2s;
+}
+
+.Link:hover {
+  background-color: #333;
+}
+
+@media (min-width: 768px) {
+  div.PageContainer {
+    padding: 8rem 0;
+  }
+}

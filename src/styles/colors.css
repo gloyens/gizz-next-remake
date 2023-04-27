@@ -5,11 +5,7 @@
   --color-grey: #888;
   --color-white: #fafafa;
 
-  --color-primary: #0091ff;
-  --color-primary-dark: #007bff;
+  --color-primary: #27dc81;
+  --color-primary-dark: #008f6d;
   --color-primary-transparent: rgba(0, 0, 139, 0.2);
-
-  --color-secondary: yellow;
-  --color-secondary-dark: gold;
-  --color-tertiary: #ea4c89;
 }

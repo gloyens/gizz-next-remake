@@ -35,7 +35,6 @@ article.Info {
 }
 
 article.Info h1 {
-  /* margin: 0; */
   font-weight: 300;
   font-size: 4rem;
   line-height: 0.8;
@@ -46,12 +45,17 @@ article.Info p {
 }
 
 article.Info a {
+  padding: 4px 8px;
+  font-family: "Courier New", Courier, monospace;
+
   color: var(--color-primary);
-  padding: 0 4px;
-  font-weight: 700;
+  background-color: var(--color-black);
+  border-radius: var(--border-radius);
+
+  transition: 0.2s;
 }
 
 article.Info a:hover {
-  text-decoration: underline;
-  text-underline-offset: 8px;
+  color: var(--color-black);
+  background-color: var(--color-primary);
 }

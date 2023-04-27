@@ -1,5 +1,8 @@
 div.FlowchartLinksWrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
   margin: 4rem auto;
+  gap: 2rem;
 }

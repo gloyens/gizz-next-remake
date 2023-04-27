@@ -5,7 +5,6 @@ button.BaseButton {
   padding: 18px 24px;
   color: var(--color-black);
   background-color: var(--color-secondary);
-  /* border: 2px solid var(--color-black); */
   border: none;
   border-radius: 4px;
   font-weight: bold;

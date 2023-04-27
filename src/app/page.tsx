@@ -1,18 +1,12 @@
+import Navbar from "@/components/Navbar";
+
 import HomeCanvas from "./webgl/home";
-import { Container, Hero, InfoWrapper, Nav, InnerNav } from "./styles";
+import { Container, Hero, InfoWrapper } from "./styles";
 
 export default function Home() {
   return (
     <Container>
-      <Nav>
-        <li>Home</li>
-        <li>
-          <InnerNav>
-            <li>All Albums</li>
-            <li>Random Album</li>
-          </InnerNav>
-        </li>
-      </Nav>
+      <Navbar />
       <Hero>
         <InfoWrapper>
           <h1>Get Into Gizz</h1>
