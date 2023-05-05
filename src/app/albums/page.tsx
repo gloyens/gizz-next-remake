@@ -1,23 +1,24 @@
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import FlowchartLink from "@/components/FlowchartLink";
 
-import { Container } from "@/app/styles";
-
-import { getAlbumData, getAllFrontmatter } from "../content";
-
+import { getAlbumData } from "../content";
+import { AlbumsContainer, LinksWrapper } from "./styles";
 export default async function Albums() {
   const titles = getAlbumData("title");
-  const slugs = getAlbumData("slug");
 
   return (
-    <Container>
-      <h1>Albums</h1>
-      {titles
-        .map((title, i) => (
-          <li key={i}>
-            <Link href={`/albums/${slugs[i]}`}>{title}</Link>
-          </li>
-        ))
-        .reverse()}
-    </Container>
+    <>
+      <Navbar />
+      <AlbumsContainer>
+        <h1>Albums</h1>
+        <LinksWrapper>
+          {titles
+            .map((title, i) => (
+              <FlowchartLink key={i} name={title} label={""} />
+            ))
+            .reverse()}
+        </LinksWrapper>
+      </AlbumsContainer>
+    </>
   );
 }

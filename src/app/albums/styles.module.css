@@ -1,0 +1,22 @@
+div.AlbumsContainer {
+  max-width: 1536px;
+  margin: 4rem auto;
+}
+
+div.AlbumsContainer h1 {
+  font-weight: 300;
+  font-size: 4rem;
+  margin: auto;
+  width: 70%;
+}
+
+div.LinksWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 1536px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  gap: 2rem;
+}
