@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import { getAlbumData } from "@/app/content";
+// import { getAlbumData } from "@/app/content";
 
 import { NavbarWrapper, Items } from "./styles";
 
-const randomAlbum = () => {
-  const slugs = getAlbumData("slug");
-  return slugs[Math.floor(Math.random() * slugs.length)];
-};
+// const randomAlbum = () => {
+//   const slugs = getAlbumData("slug");
+//   return slugs[Math.floor(Math.random() * slugs.length)];
+// };
 
 const Navbar = () => {
   return (
