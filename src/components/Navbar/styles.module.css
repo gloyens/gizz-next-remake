@@ -4,7 +4,7 @@ nav.NavbarWrapper {
 
   display: flex;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   z-index: 1;
 }
@@ -32,6 +32,7 @@ ul.Items li a:hover {
   nav.NavbarWrapper {
     position: sticky;
     top: 0;
+    padding: 0 2rem;
     background: linear-gradient(#000000bb 20%, #00000000 100%);
   }
 }
