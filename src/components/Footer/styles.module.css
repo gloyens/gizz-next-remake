@@ -1,0 +1,8 @@
+footer.FooterWrapper {
+  color: var(--color-grey);
+  font-family: "Courier New", Courier, monospace;
+  text-align: right;
+
+  position: flex;
+  padding: 1rem 2rem;
+}

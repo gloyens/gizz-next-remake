@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import "@/styles/colors.css";
 import { Metadata } from "next";
 
+import Footer from "@/components/Footer";
+
 // TODO: metadata
 export const metadata: Metadata = {
   title: {
@@ -44,7 +46,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
