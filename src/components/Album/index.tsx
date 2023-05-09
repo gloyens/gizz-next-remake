@@ -34,7 +34,7 @@ const Album = ({ album }: Props) => {
         <Info>
           <Content />
         </Info>
-        <MediaPlayer bandcampCode={bandcampCode!} />
+        <MediaPlayer bandcampCode={bandcampCode ? bandcampCode : 0} />
         {nextAlbums[0] == "compilation" ? (
           <IndividualLinks nextAlbums={nextAlbums} />
         ) : (

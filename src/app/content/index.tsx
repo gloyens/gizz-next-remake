@@ -36,7 +36,6 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
   if (!fs.existsSync(mdxPath)) return;
 
   const source = fs.readFileSync(mdxPath, "utf8");
-  // No idea how anything below this works
   const { frontmatter, code } = await bundleMDX({ source });
 
   return {
@@ -48,11 +47,16 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
   };
 };
 
-export const getAlbumData = (prop: string) => {
+export const getAlbumData = (prop: keyof Frontmatter) => {
   const albumsData = getAllFrontmatter("albums");
   const data: string[] = [];
 
-  albumsData.map((album) => data.push(album[prop]));
+  albumsData.map((album) => {
+    const value = album[prop];
+    if (typeof value === "string") {
+      data.push(value);
+    }
+  });
 
   return data;
 };

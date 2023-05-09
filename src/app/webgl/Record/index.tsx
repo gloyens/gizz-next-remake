@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 
 import * as THREE from "three";
-import { DoubleSide, Mesh } from "three";
+import { DoubleSide, Mesh, Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
 import { useCursor } from "@react-three/drei";
 import { Plane } from "@react-three/drei";
@@ -36,7 +36,7 @@ const Record = () => {
   useCursor(isHovering);
 
   return (
-    <animated.mesh scale={scale}>
+    <animated.mesh scale={scale as unknown as Vector3}>
       <Plane
         ref={recordRef}
         position={[0, 0, 4]}
@@ -44,7 +44,8 @@ const Record = () => {
         onPointerEnter={() => setIsHovering(true)}
         onPointerLeave={() => setIsHovering(false)}
         onClick={() => {
-          window.location = "/albums/im-in-your-mind-fuzz";
+          window.location =
+            "/albums/im-in-your-mind-fuzz" as unknown as Location;
         }}
       >
         <meshPhongMaterial side={DoubleSide} map={texture} />
