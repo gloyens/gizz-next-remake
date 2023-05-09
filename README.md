@@ -37,9 +37,9 @@ Pages are built from traditional React components as well as with **[CSS Compone
 
 ## Future Plans
 Besides the issues below, there's a few things I want to do:
-- Rework the flowchart a little - the new albums especially could be better placed
-- Add the concisely-named new album, "PetroDragon Apocalypse; or Dawn of Eternal Night: an Annihilation of Planet Earth and the Beginning of Merciless Damnation"
-- Add all the extras that I never got around to doing on the HTML version of the site - live albums, demos etc
+- [x] Rework the flowchart a little - the new albums especially could be better placed
+- [x] Add the concisely-named new album, "PetroDragonic Apocalypse; or Dawn of Eternal Night: an Annihilation of Planet Earth and the Beginning of Merciless Damnation"
+- [ ] Add all the extras that I never got around to doing on the HTML version of the site - live albums, demos etc
 
 ### Known Issues
 - Random button doesn't work properly withserver components; might need to be removed.
