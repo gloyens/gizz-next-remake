@@ -25,6 +25,10 @@ main.Hero p {
   line-height: 1.8;
 }
 
+div.InfoWrapper {
+  padding: 0 2rem;
+}
+
 div.InfoWrapper p {
   color: var(--color-grey);
 }
