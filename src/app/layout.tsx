@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: "https://get-into-gizz.com",
     images: [
       {
-        url: "https://www.css-components.net/banner.png",
+        url: "/im-in-your-mind-fuzz.jpg",
         width: 1200,
         height: 630,
       },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Get Into Gizz",
     creator: "@gloyens",
-    images: ["https://www.css-components.net/banner.png"],
+    images: ["/im-in-your-mind-fuzz.jpg"],
   },
   robots: {
     index: true,
