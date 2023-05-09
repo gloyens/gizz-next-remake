@@ -42,5 +42,5 @@ Besides the issues below, there's a few things I want to do:
 - Add all the extras that I never got around to doing on the HTML version of the site - live albums, demos etc
 
 ### Known Issues
-- Random buttoon doesn't work properly withserver components; might need to be removed.
+- Random button doesn't work properly withserver components; might need to be removed.
 - CSS is still pretty messy, and could use some refactoring
