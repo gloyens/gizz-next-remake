@@ -40,7 +40,8 @@ article.Info h1 {
   line-height: 0.8;
 }
 
-article.Info p {
+article.Info p,
+article.Info li {
   color: var(--color-grey);
 }
 
