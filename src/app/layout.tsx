@@ -8,17 +8,15 @@ export const metadata: Metadata = {
     default: "Get Into Gizz",
     template: "%s | Get Into Gizz",
   },
-  description:
-    "Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components.",
+  description: "Your guide to King Gizzard and the Lizard Wizard.",
   keywords: ["css", "component", "utility"],
   openGraph: {
     title: {
       default: "Get Into Gizz",
       template: "%s | Get Into Gizz",
     },
-    description:
-      "Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components.",
-    url: "https://www.css-components.net",
+    description: "Your guide to King Gizzard and the Lizard Wizard.",
+    url: "https://get-into-gizz.com",
     images: [
       {
         url: "https://www.css-components.net/banner.png",
