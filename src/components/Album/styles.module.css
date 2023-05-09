@@ -29,7 +29,7 @@ main.AlbumWrapper iframe {
 }
 
 article.Info {
-  padding: 2rem;
+  padding: 2rem 0;
   font-size: 0.9rem;
   line-height: 1.8;
 }
@@ -38,6 +38,7 @@ article.Info h1 {
   font-weight: 300;
   font-size: 4rem;
   line-height: 0.8;
+  word-break: break-word;
 }
 
 article.Info p,
