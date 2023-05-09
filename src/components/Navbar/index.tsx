@@ -21,9 +21,9 @@ const Navbar = () => {
         <li>
           <Link href="/albums">All albums</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href={`/albums/${randomAlbum()}`}>Random album</Link>
-        </li>
+        </li> */}
       </Items>
     </NavbarWrapper>
   );
