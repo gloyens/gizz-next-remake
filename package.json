@@ -16,6 +16,7 @@
   "dependencies": {
     "@next/font": "^13.2.1",
     "@phntms/css-components": "^0.2.0",
+    "@phntms/react-gtm": "^0.1.1",
     "@phntms/react-share": "^1.0.1",
     "@react-spring/web": "^9.7.1",
     "@react-three/drei": "^9.58.4",

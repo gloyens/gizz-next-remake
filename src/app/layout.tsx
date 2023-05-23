@@ -1,10 +1,12 @@
 import "@/styles/globals.css";
 import "@/styles/colors.css";
 import { Metadata } from "next";
+import { TrackingHeadScript } from "@phntms/react-gtm";
 
 import Footer from "@/components/Footer";
 
-// TODO: metadata
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
+
 export const metadata: Metadata = {
   title: {
     default: "Get Into Gizz",
@@ -46,6 +48,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <TrackingHeadScript id={GTM_ID} />
+        <title>Get Into Gizz</title>
+      </head>
       <body>
         {children}
         <Footer />
