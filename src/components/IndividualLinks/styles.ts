@@ -17,3 +17,7 @@ export const Button = styled("span", {
 export const Link = styled("a", {
   css: css.Link,
 });
+
+export const Content = styled("div", {
+  css: css.Content,
+});
