@@ -14,12 +14,11 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@next/font": "^13.2.1",
-    "@phntms/css-components": "^0.2.0",
+    "@phantomstudios/css-components": "^0.4.0",
     "@phntms/react-gtm": "^0.1.1",
     "@phntms/react-share": "^1.0.1",
     "@react-spring/web": "^9.7.1",
-    "@react-three/drei": "^9.58.4",
+    "@react-three/drei": "^9.121.4",
     "@react-three/fiber": "^8.12.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
@@ -30,13 +29,13 @@
     "glob": "^8.0.3",
     "gray-matter": "^4.0.3",
     "mdx-bundler": "^9.0.1",
-    "next": "^13.3.2-canary.10",
+    "next": "^14.2.23",
     "next-sitemap": "^3.1.55",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-syntax-highlighter": "^15.5.0",
-    "three": "^0.150.1",
+    "three": "^0.172.0",
     "typescript": "4.9.3"
   },
   "devDependencies": {

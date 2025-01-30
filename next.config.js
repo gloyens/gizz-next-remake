@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
     scrollRestoration: false,
-    serverComponentsExternalPackages: ['mdx-bundler'],
+    serverComponentsExternalPackages: ["mdx-bundler"],
   },
-}
+};
 
 module.exports = nextConfig;
