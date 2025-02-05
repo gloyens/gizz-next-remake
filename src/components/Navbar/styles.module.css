@@ -1,29 +1,52 @@
 nav.NavbarWrapper {
-  font-family: "Courier New", Courier, monospace;
-  color: var(--color-primary);
-
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
 
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  font-family: "Courier New", Courier, monospace;
+  color: var(--color-primary);
+  padding: 0 2rem;
+  background: linear-gradient(#000000bb 20%, #00000000 100%);
+
+  z-index: 2;
 }
 
 ul.Items {
   list-style-type: none;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 2rem;
+  width: 100%;
 }
 
-ul.Items li a {
+ul.Items li:first-child {
+  margin-right: auto;
+}
+
+ul.Items li button {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul.Items li a,
+ul.Items li button {
   padding: 4px 8px;
+  background-color: #000;
+  border-radius: var(--border-radius);
 }
 
-ul.Items li a:hover {
+ul.Items li a:hover,
+ul.Items li button:hover {
   color: var(--color-black);
   background-color: var(--color-primary);
-  border-radius: var(--border-radius);
 
   transition: 0.2s;
 }
