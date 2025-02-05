@@ -15,7 +15,13 @@ main.Hero {
 }
 
 main.Hero h1 {
-  font-weight: lighter;
+  font-family: var(--font-roboto);
+  text-transform: uppercase;
+  font-stretch: extra-expanded;
+  font-weight: 900;
+  font-variation-settings: "XTRA" 1000;
+
+  line-height: 0.9;
   font-size: 4rem;
   margin-top: 0;
 }

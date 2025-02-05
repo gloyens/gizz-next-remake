@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import "@/styles/colors.css";
+import { Roboto_Flex } from "next/font/google";
 import { Metadata } from "next";
 import { TrackingHeadScript } from "@phntms/react-gtm";
 
@@ -7,13 +8,33 @@ import Footer from "@/components/Footer";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "";
 
+const roboto = Roboto_Flex({
+  weight: "variable",
+  subsets: ["latin"],
+  axes: [
+    "GRAD",
+    "XOPQ",
+    "XTRA",
+    "YOPQ",
+    "YTAS",
+    "YTDE",
+    "YTFI",
+    "YTLC",
+    "YTUC",
+    "opsz",
+    "slnt",
+    "wdth",
+  ],
+  display: "swap",
+  variable: "--font-roboto",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Get Into Gizz",
     template: "%s | Get Into Gizz",
   },
   description: "Your guide to King Gizzard and the Lizard Wizard.",
-  keywords: ["css", "component", "utility"],
   openGraph: {
     title: {
       default: "Get Into Gizz",
@@ -52,7 +73,7 @@ export default function RootLayout({
         <TrackingHeadScript id={GTM_ID} />
         <title>Get Into Gizz</title>
       </head>
-      <body>
+      <body className={roboto.className}>
         {children}
         <Footer />
       </body>
