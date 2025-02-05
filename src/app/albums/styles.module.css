@@ -4,10 +4,22 @@ div.AlbumsContainer {
 }
 
 div.AlbumsContainer h1 {
-  font-weight: 300;
+  font-family: var(--font-roboto);
+  text-transform: uppercase;
+  font-stretch: extra-expanded;
+  font-weight: 900;
+  font-variation-settings: "XTRA" 1000;
+
+  line-height: 0.9;
   font-size: 4rem;
   margin: auto;
-  width: 70%;
+  padding-inline: 2rem;
+  max-width: 72rem;
+
+  @media (max-width: 72rem) {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 
 div.LinksWrapper {
