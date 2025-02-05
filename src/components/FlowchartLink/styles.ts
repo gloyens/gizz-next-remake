@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { styled } from "@phantomstudios/css-components";
 
 import css from "./styles.module.css";
 
-export const FlowchartLinkWrapper = styled("a", {
+export const FlowchartLinkWrapper = styled(Link, {
   css: css.FlowchartLinkWrapper,
 });
 
