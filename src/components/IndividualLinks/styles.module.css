@@ -12,7 +12,7 @@ ul.IndividualLinksWrapper li {
   padding: 0;
 }
 
-a.Link {
+.AlbumLink {
   list-style-type: none;
   padding: 1rem 0;
 

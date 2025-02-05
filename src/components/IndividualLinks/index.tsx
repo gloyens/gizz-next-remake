@@ -6,7 +6,7 @@ import {
   IndividualLinksWrapper,
   IndividualLink,
   Button,
-  Link,
+  AlbumLink,
   Content,
 } from "./styles";
 
@@ -18,8 +18,8 @@ const IndividualLinks = ({ nextAlbums }: Props) => {
   return (
     <IndividualLinksWrapper>
       {nextAlbums.slice(1).map((track) => (
-        <IndividualLink key={track}>
-          <Link href={`/albums/${kebabify(track[1])}`}>
+        <AlbumLink href={`/albums/${kebabify(track[1])}`} key={track}>
+          <IndividualLink>
             <Image
               src={`/${kebabify(track[1])}.jpg`}
               alt={`${track[1]} album cover`}
@@ -32,8 +32,8 @@ const IndividualLinks = ({ nextAlbums }: Props) => {
               ...
               <Button>Go to {track[1]}</Button>
             </Content>
-          </Link>
-        </IndividualLink>
+          </IndividualLink>
+        </AlbumLink>
       ))}
     </IndividualLinksWrapper>
   );

@@ -1,4 +1,4 @@
-a.FlowchartLinkWrapper {
+.FlowchartLinkWrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,11 +14,11 @@ a.FlowchartLinkWrapper {
   transition: 0.2s;
 }
 
-a.FlowchartLinkWrapper:hover {
+.FlowchartLinkWrapper:hover {
   transform: scale(1.02);
 }
 
-a.FlowchartLinkWrapper img {
+.FlowchartLinkWrapper img {
   width: 100%;
   height: fit-content;
   object-fit: contain;

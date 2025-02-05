@@ -1,4 +1,7 @@
-import { styled } from "@phntms/css-components";
+"use client";
+
+import Link from "next/link";
+import { styled } from "@phantomstudios/css-components";
 
 import css from "./styles.module.css";
 
@@ -14,8 +17,8 @@ export const Button = styled("span", {
   css: css.Button,
 });
 
-export const Link = styled("a", {
-  css: css.Link,
+export const AlbumLink = styled(Link, {
+  css: css.AlbumLink,
 });
 
 export const Content = styled("div", {
