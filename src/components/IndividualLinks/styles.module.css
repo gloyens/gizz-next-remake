@@ -4,12 +4,15 @@ ul.IndividualLinksWrapper {
   padding: 0;
 
   margin: 4rem auto;
-  /* gap: 2rem; */
 }
 
 ul.IndividualLinksWrapper li {
   list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
   padding: 0;
+  width: 100%;
 }
 
 .AlbumLink {
@@ -34,11 +37,17 @@ a.Link img {
 div.Content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
   align-items: flex-start;
+  justify-content: space-between;
   align-self: center;
 
   width: 100%;
+}
+
+div.Content p {
+  margin: 0;
 }
 
 span.Button {
