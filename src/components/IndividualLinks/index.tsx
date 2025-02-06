@@ -27,9 +27,11 @@ const IndividualLinks = ({ nextAlbums }: Props) => {
               height={64}
             />
             <Content>
-              If you {track[0] == "Muddy Water" ? "prefer the " : "liked "}
-              {track[0]}
-              ...
+              <p>
+                If you {track[0] == "Muddy Water" ? "prefer the " : "liked "}
+                {track[0]}
+                ...
+              </p>
               <Button>Go to {track[1]}</Button>
             </Content>
           </IndividualLink>

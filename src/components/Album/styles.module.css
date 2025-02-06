@@ -44,7 +44,7 @@ article.Info h1 {
   font-variation-settings: "XTRA" 1000;
 
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 8vw, 3rem);
   hyphens: auto;
 }
 
