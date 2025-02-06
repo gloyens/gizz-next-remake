@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "https://get-into-gizz.com/:path*",
-      "destination": "https://getintogizz.com/:path*",
-      "permanent": true
-    }
-  ]
-}
