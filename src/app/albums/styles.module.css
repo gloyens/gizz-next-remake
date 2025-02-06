@@ -17,7 +17,7 @@ div.AlbumsContainer h1 {
   max-width: 72rem;
 
   @media (max-width: 72rem) {
-    font-size: 3rem;
+    font-size: clamp(2rem, 12vw, 3rem);
     text-align: center;
   }
 }
