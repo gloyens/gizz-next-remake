@@ -14,7 +14,7 @@ export default function Home() {
             King Gizzard are a genre-confused Australian rock band known for
             their insane prolificity and tendency to experiment with their
             sound. Fans think they&apos;re a once-in-a-generation talent, but
-            with <strong>23 studio albums</strong> (and counting!) to choose
+            with <strong>26 studio albums</strong> (and counting!) to choose
             from, where do you start?
           </p>
 
