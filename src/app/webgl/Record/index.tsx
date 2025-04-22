@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import * as THREE from "three";
 import { DoubleSide, Mesh, Vector3 } from "three";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useCursor } from "@react-three/drei";
 import { Plane } from "@react-three/drei";
 import { animated, useSpring } from "@react-spring/three";
@@ -12,20 +12,43 @@ import { animated, useSpring } from "@react-spring/three";
 const Record = () => {
   const recordRef = useRef<Mesh>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [textureLoaded, setTextureLoaded] = useState(false);
+  const { size } = useThree();
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const loader = new THREE.TextureLoader();
-  const texture = loader.load("im-in-your-mind-fuzz.jpg");
+  useEffect(() => {
+    const textureLoader = new THREE.TextureLoader();
+    textureLoader.load("im-in-your-mind-fuzz.jpg", (loadedTexture) => {
+      texture.current = loadedTexture;
+      setTextureLoaded(true);
+    });
+  }, []);
 
-  useFrame(({ clock }) => {
-    if (!recordRef.current) return;
+  const texture = useRef<THREE.Texture | null>(null);
 
-    const t = Math.sin(clock.getElapsedTime());
+  useFrame(({ clock, pointer }) => {
+    if (!recordRef.current || !textureLoaded) return;
 
-    recordRef.current.rotation.x = -0.25;
-    recordRef.current.rotation.y = t * 0.2;
+    // Convert pointer coordinates to normalized device coordinates (-1 to 1)
+    const x = (pointer.x * size.width) / size.width;
+    const y = (pointer.y * size.height) / size.height;
 
+    setMousePosition((prev) => ({
+      x: prev.x + (x - prev.x) * 0.05,
+      y: prev.y + (y - prev.y) * 0.05,
+    }));
+
+    // Base rotation from clock for continuous movement
+    const baseRotation = Math.sin(clock.getElapsedTime()) * 0.1;
+
+    // Add mouse influence to rotation - centered at 0 when mouse is at center
+    recordRef.current.rotation.x = mousePosition.y * 0.3;
+    recordRef.current.rotation.y = baseRotation + mousePosition.x * 0.3;
+
+    // Subtle position adjustment based on mouse
     recordRef.current.position.y =
-      Math.sin(clock.getElapsedTime() * 4 + 1) * 0.02;
+      Math.sin(clock.getElapsedTime() * 4 + 1) * 0.02 + mousePosition.y * 0.1;
+    recordRef.current.position.x = mousePosition.x * 0.1;
   });
 
   const { scale } = useSpring({
@@ -34,6 +57,15 @@ const Record = () => {
   });
 
   useCursor(isHovering);
+
+  // Show a placeholder or loading state while texture loads
+  if (!textureLoaded || !texture.current) {
+    return (
+      <Plane position={[0, 0, 4]}>
+        <meshBasicMaterial color="#000000" />
+      </Plane>
+    );
+  }
 
   return (
     <animated.mesh scale={scale as unknown as Vector3}>
@@ -48,7 +80,11 @@ const Record = () => {
             "/albums/im-in-your-mind-fuzz" as unknown as Location;
         }}
       >
-        <meshPhongMaterial side={DoubleSide} map={texture} />
+        <meshPhongMaterial
+          side={DoubleSide}
+          map={texture.current}
+          transparent={true}
+        />
       </Plane>
     </animated.mesh>
   );

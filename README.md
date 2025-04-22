@@ -35,6 +35,21 @@ This is all accessed through Frontmatter, and makes it extremely easy to change 
 
 Pages are built from traditional React components as well as with **[CSS Components](https://www.css-components.net/)**.
 
+## Developer Guide
+### Getting Started
+- 💻 Ensure you have **Node.js** (version 18.17.0 or later) installed
+- 📦 Clone the repository and install dependencies:
+```bash
+git clone https://github.com/your-username/gizz-next-remake.git
+cd gizz-next-remake
+npm install
+```
+- 🚀 Run the development server:
+```bash
+npm run dev
+```
+- 🌐 Open **[http://localhost:3000](http://localhost:3000)** in your browser
+
 ## Future Plans
 Besides the issues below, there's a few things I want to do:
 - [x] Rework the flowchart a little - the new albums especially could be better placed
