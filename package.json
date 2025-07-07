@@ -11,7 +11,8 @@
     "lint": "npm-run-all check-types lint:js",
     "lint:js": "next lint",
     "fix": "next lint --fix",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "new-album": "node scripts/new-album.js"
   },
   "dependencies": {
     "@phantomstudios/css-components": "^0.4.0",
